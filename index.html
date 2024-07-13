@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>SemTrack Dataset</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons --> 
+  <link href="assets/img/favicon_io/favicon-32x32.png" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">  -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css" integrity="sha384-D+9gmBxUQogRLqvARvNLmA9hS2x//eK1FhVb9PiU86gmcrBrJAQT8okdJ4LMp2uv" crossorigin="anonymous">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Lumia - v4.9.1
+  * Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html"><span style="color:#217eff; font-weight: bold;">SemTrack</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/paper.png" alt="" class="img-fluid"></a> -->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#download">Download</a></li>
+          <li><a class="nav-link scrollto" href="#evaluation_metrics">Evaluation Metrics</a></li>
+          <li><a class="nav-link scrollto " href="#publication">Publication</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#people">People</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center overflow-hidden">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>
+        <span style="color:#ff5151; font-size: 80px;">SemTrack</span> 
+      </h1>
+      
+      <h1>A Large Scale Dataset for Semantic Tracking in the Wild</h1>
+      <a href="#about" class="btn btn-primary scrollto">About</a>
+      <a href="#download" class="btn btn-primary scrollto">Download</a>
+      <a href="#evaluation_metrics" class="btn btn-primary scrollto">Evaluation Metrics</a>
+      <a href="#publication" class="btn btn-primary scrollto">Publication</a>
+      <!-- <a href="#people" class="btn btn-primary scrollto">People</a> -->
+
+      <div class="uni-logo">
+        <img src="assets/img/sutd.png" alt="Uni LOGO" width="240" height="100" style="background-color:rgb(255, 255, 255);">
+      </div>
+      
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= News Section ======= -->
+    <!-- <section id="news" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><span style="color: red">News</span></h2>          
+        </div>
+
+        <div class="news">
+          <div class="fillbf">
+          </div>
+          <div class="main-news">
+            <b>- [07/2024] Our paper is accepted by ECCV2024! </b><br>
+          </div>
+
+          <div class="fillaf">
+          </div>
+        </div> 
+
+    </section> -->
+    <!-- End News Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <p style="font-size: 20px;">Combining 
+            <a href="https://www.multimediacommons.org/">YFCC100M</a>, 
+            <a href="https://taodataset.org/">TAO</a>, 
+            <a href="https://xdshang.github.io/docs/vidor.html">VIDOR</a>, 
+            <a href="https://xdshang.github.io/docs/imagenet-vidvrd.html">VIDVRD</a>, 
+            <a href="http://hacs.csail.mit.edu/">HACS</a>, 
+            <a href="https://research.google.com/ava/">AVA</a>,
+            <a href="http://got-10k.aitestunion.com/">GOT-10K</a>,
+            <a href="https://image-net.org/challenges/LSVRC/2016/">ILSVRC2016</a>, 
+            , SemTrack is a large scale dataset aiming for a new task: Semantic Tracking.  
+          </p>
+        </div>
+
+      </div>
+    </section><!-- End What We Do Section -->
+
+
+    <!-- ======= Statistic Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-camera-video"></i>
+              <span style="color:#6daaf8">6,964</span>
+              <p>High quality annotated videos</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6">
+            <div class="count-box">
+              <i class="bi bi-card-list"></i>
+              <span style="color:#6daaf8">116</span>
+              <p>Object Categories</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-card-list"></i>
+              <span style="color:#6daaf8">52</span>
+              <p>Interaction Categories</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-file-earmark-play"></i>
+              <span style="color:#6daaf8">7.4M</span>
+              <p>Frames in total</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Counts Section -->
+
+    <!-- ======= Download Section ======= -->
+    <section id="download" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Download</h2>
+          <!-- <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga</p> -->
+        </div>
+
+        <div class="row mt-5 justify-content-center">
+
+          <div class="col-lg-10">
+
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-lg-4 info">
+                  <i class="bi bi-file-earmark"></i>
+                  <h4><a href="#">Annotations</a></h4>
+                  <p>Download our annotations</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-tools"></i>
+                  <h4><a href="#">Toolkit</a></h4>
+                  <p>Start exploring LIT with our toolkit</p>
+                </div>
+
+                <div class="col-lg-4 info mt-4 mt-lg-0">
+                  <i class="bi bi-camera-video"></i>
+                  <h4>Videos</h4>
+                  <p>
+                    <a href="https://xdshang.github.io/docs/vidor.html">VIDOR</a>: <br>
+                    Download train and validation videos<br>
+                    <a href="https://xdshang.github.io/docs/imagenet-vidvrd.html">VIDVRD</a>: <br>
+                    Download video<br>
+                    <a href="https://taodataset.org/">TAO</a><br>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Download Section -->
+
+
+    <!-- ======= Evaluation metrics Section ======= -->
+    <section id="evaluation_metrics" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Evaluation Metrics</h2>          
+        </div>
+
+        
+        <div class="row mt-5 justify-content-center">
+
+          <div class="col-lg-10">
+            <p>We inherit the evaluation metrics used for tracking task, and add the interaction evaluation. </p>
+
+            <h3>Int-AP: </h3>
+            <p>
+              \( Int\_AP \) measures the ... 
+              $$Int\_AP = \frac{1}{11} \sum_{r \in {0,0.1,...,1.0}} Int\_AP(r)$$
+            </p>
+
+            <h3>Int-mAP: </h3>
+            <p>
+              \( Int\_mAP \) measures the ... 
+              $$Int\_mAP = \frac{1}{N_{int}} \sum_{i=1}^{N_{int}} Int\_AP_{i}$$
+            </p> 
+
+            <h3>TI-mAP: </h3>
+
+            <h3>MTI: </h3>
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Download Section -->
+
+
+    <!-- ======= Publication Section ======= -->
+    <section id="publication" class="contact section-bg overflow-hidden">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Publication</h2>
+          <p style="font-size: 20px;">If you find our paper helpful, please cite our paper.</p>
+          
+        </div>
+
+        <div class="d-flex mb-4">
+          <div class="paper-img">
+            <img src="assets/img/paper.png" class="img-fluid" alt="Paper image" width="200" height="200">
+          </div>
+          <div class="paper-title px-4">
+            <b>SemTrack: A Large Scale Dataset for Semantic Tracking in the Wild</b><br>
+            Pengfei Wang*, Xiaofei Hui*, Jing Wu*, Zile Yang*, Kian Eng Ong*, Xinge Zhao, Beijia Lu, Dezhao Huang, Evan Ling, Weiling Chen, Keng Teck Ma, Minhoe Hur, Jun Liu<br>
+            <i>ECCV</i>, 2024 <br>
+            [<a href="#" target="_blank">ArXiv</a>] [<a href="https://github.com/sutdcv/SemTrack" target="_blank">Code</a>]  <br>
+            Note: Authors with * all have equal contributions. 
+          </div>
+        </div> 
+
+        <div class="row-paper mx-5">
+            <p>If you find our paper helpful, please cite our paper.</p>
+            <div class="bg-body text-start p-3">
+              @inproceedings{wang2024semtrack, <br>
+                title={SemTrack: A Large Scale Dataset for Semantic Tracking in the Wild}, <br>
+                author={Wang, Pengfei and Hui, Xiaofei and Wu, Jing and Yang, Zile and Ong, Kian Eng and Zhao, Xinge and Lu, Beijia and Huang, Dezhao and Ling, Evan and Chen, Weiling and Ma, Keng Teck and Hur, Minhoe and Liu, Jun}, <br>
+                booktitle={ECCV}, <br>
+                year={2024} <br>
+              }
+            </div>
+        </div>
+      </div>
+        
+
+    <!-- <iframe style="display: block; margin: auto;" width="800" height="600" src="https://www.youtube.com/embed/ig3qHRVZRvM" frameborder="0" allowfullscreen>
+    </iframe> -->
+
+    </section>
+    <!-- End Publication Section -->
+
+
+    <!-- ======= People Section ======= -->
+    <!-- <section id="people" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>People</h2>
+          <p style="font-size: 20px;">Thanks to all team members for their hard working. </p>
+        </div>  
+
+          <div class="row justify-content-center">
+            <div class="col-md-auto">
+              <div class="member">
+                <h4>sss</h4>
+                <span>Research Fellow</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-github"></i></a>
+                  <a href=""><i class="material-icons">school</i></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-auto">
+              <div class="member">
+                <h4>sss</h4>
+                <span>Research Fellow</span>
+                <div class="social">
+                  <a href="https://maximume-wu.github.io/"><i class="bi bi-globe"></i></a>
+                  <a href=""><i class="bi bi-github"></i></a>
+                  <a href=""><i class="material-icons">school</i></a>
+                </div>
+              </div>
+            </div>
+        
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Team Section -->
+
+    <!-- ======= Acknowledgement Section ======= -->
+    <section id="ccknowledgement" class="contact ">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Acknowledgement</h2>
+          <p style="font-size: 20px;">This work is supported by Lam Research (ND-00102-E0901-E0901-000)</p>
+        </div>
+
+    </iframe>
+
+    </section><!-- End Contact Section -->
+
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>SemTrack</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/lumia-bootstrap-business-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <!-- <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div> -->
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- The loading of KaTeX is deferred to speed up page rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.js" integrity="sha384-483A6DwYfKeDa0Q52fJmxFXkcPCFfnXMoXblOkJ4JcA8zATN6Tm78UNL72AKk+0O" crossorigin="anonymous"></script>
+
+  <!-- To automatically render math in text elements, include the auto-render extension: -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/contrib/auto-render.min.js" integrity="sha384-yACMu8JWxKzSp/C1YV86pzGiQ/l1YUfE8oPuahJQxzehAjEt2GiQuy/BIvl9KyeF" crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"></script>
+
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
