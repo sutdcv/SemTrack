@@ -414,7 +414,7 @@ h6 {
 #hero {
   width: 100%;
   height: 60vh;
-  /* background: url("../img/VLOG.png") center center; */
+  background: url("../img/teaser.png") center center;
   background-size: cover;
   position: relative;
   margin-top: 70px;
