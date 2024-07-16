@@ -5,7 +5,7 @@ SemTrack: A Large-scale Dataset for Semantic Tracking in the Wild
 This is the official repository for the paper "SemTrack: A Large-scale Dataset for Semantic Tracking in the Wild" (ECCV 2024).
 
 ## Paper
-[[arXiv](https://arxiv.org/abs/2104.00946)] [[Project Page](https://zhangyizhou.github.io/SemTrack/)]
+[[arXiv](https://arxiv.org/abs/2104.00946)] [[Project Page](https://sutdcv.github.io/SemTrack/)]
 
 ## Dataset
 Please download our dataset and toolkit [here](https://forms.office.com/Pages/ResponsePage.aspx?id=drd2NJDpck-5UGJImDFiPQJNzw6AhuZDkzEViiWzJltUNjhKM01KWjhXN0FBNjcxNVBZQk03VVFHQi4u).
