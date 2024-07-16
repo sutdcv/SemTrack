@@ -1,5 +1,4 @@
-# SemTrack
-SemTrack: A Large-scale Dataset for Semantic Tracking in the Wild
+# SemTrack: A Large-scale Dataset for Semantic Tracking in the Wild (ECCV 2024)
 
 
 This is the official repository for the paper "SemTrack: A Large-scale Dataset for Semantic Tracking in the Wild" (ECCV 2024).
