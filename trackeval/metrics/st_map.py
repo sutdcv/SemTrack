@@ -22,7 +22,7 @@ class STMAP(_BaseMetric):
             'TIME_RANGES': [[0, 3], [3, 10], [10, 1e5]],  # additional time range sets for which STMAP is evaluated
             # (all time range always included) , default values for TAO evaluation
             'TIME_RANGE_LABELS': ["time_s", "time_m", "time_l"],  # the labels for the time ranges
-            'IOU_THRESHOLDS': np.arange(0.05, 0.99, 0.05),  # np.arange(0.3, 0.96, 0.05),  # the IoU thresholds
+            'IOU_THRESHOLDS': np.arange(0.1, 0.6, 0.1),  # np.arange(0.05, 0.99, 0.05),  # np.arange(0.3, 0.96, 0.05),  # the IoU thresholds
             # 'IOU_THRESHOLDS': np.arange(0.05, 0.69, 0.05),  # the IoU thresholds
             # 'IOU_THRESHOLDS': np.arange(0.05, 0.49, 0.05),  # the IoU thresholds
             # 'IOU_THRESHOLDS': np.arange(0.05, 0.29, 0.05),  # the IoU thresholds

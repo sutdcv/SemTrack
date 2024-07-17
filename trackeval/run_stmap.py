@@ -2,10 +2,7 @@
 """ 
 Author: Wang Pengfei
 
-run_mot_event.py
-
-Run example:
-run_mot_event.py
+run_stmap.py
 
 Command Line Arguments: Defaults, # Comments
     Eval arguments:
@@ -20,8 +17,8 @@ Command Line Arguments: Defaults, # Comments
         'OUTPUT_DETAILED': True,
         'PLOT_CURVES': True,
     Dataset arguments:
-        'GT_FOLDER': os.path.join(code_path, 'data/gt/event/'),  # Location of GT data
-        'TRACKERS_FOLDER': os.path.join(code_path, 'data/trackers/event/'),  # Trackers location
+        'GT_FOLDER': os.path.join(code_path, 'data/'),  # Location of GT data
+        'TRACKERS_FOLDER': os.path.join(code_path, 'trackers/'),  # Trackers location
         'OUTPUT_FOLDER': None,  # Where to save eval results (if None, same as TRACKERS_FOLDER)
         'TRACKERS_TO_EVAL': None,  # Filenames of trackers to eval (if None, all in folder)
         'CLASSES_TO_EVAL': ['adult', 'aircraft', 'antelope', 'baby', 'baby_seat', 'baby_walker', 'backpack', 'ball/sports_ball', 'bat', 'bear', 'bench', 'bicycle', 'bird', 'bottle', 'bread', 'bus/truck', 'cake', 'camel', 'camera', 'car', 'cat', 'cattle/cow', 'cellphone', 'chair', 'chicken', 'child', 'crab', 'crocodile', 'cup', 'dish', 'dog', 'duck', 'electric_fan', 'elephant', 'faucet', 'fish', 'fox', 'frisbee', 'fruits', 'giant_panda', 'guitar', 'hamster/rat', 'handbag', 'horse', 'kangaroo', 'laptop', 'leopard', 'lion', 'lizard', 'microwave', 'monkey', 'motorcycle', 'oven', 'penguin', 'piano', 'pig', 'rabbit', 'racket', 'red_panda', 'refrigerator', 'scooter', 'screen/monitor', 'sheep/goat', 'sink', 'skateboard', 'ski', 'snake', 'snowboard', 'sofa', 'squirrel', 'stool', 'stop_sign', 'suitcase', 'surfboard', 'table', 'tiger', 'toilet', 'toy', 'traffic_light', 'train', 'turtle', 'vegetables', 'watercraft', 'whale', 'zebra'],
@@ -46,10 +43,10 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 import trackeval  # noqa: E402
 
 parser = argparse.ArgumentParser("EVENT EVAL")
-parser.add_argument("--category_info", type=str, default="data/event/category_info_new_split", help="path to category info folder")
-parser.add_argument("--GT_FOLDER", type=str, default="data/event/gt_tao_format/01", help="path to gt data")
-parser.add_argument("--TRACKERS_FOLDER", type=str, default="data/event/1BASELINE_TAO_FILTER/yolox_x")
-parser.add_argument("--OUTPUT_FOLDER", type=str, default="output/debug/yolox_x", help="path to save eval results")
+parser.add_argument("--category_info", type=str, default="data/category_info_new_split", help="path to category info folder")
+parser.add_argument("--GT_FOLDER", type=str, default="data", help="path to gt data")
+parser.add_argument("--TRACKERS_FOLDER", type=str, default="trackers")
+parser.add_argument("--OUTPUT_FOLDER", type=str, default="output", help="path to save eval results")
 parser.add_argument("--TRACKERS_TO_EVAL", nargs='+', default=['bytetrack'], help="Filenames of trackers to eval (if None, all in folder) ['bytetrack', 'deepsort', 'sort']")
 parser.add_argument("--SPLIT_TO_EVAL", type=str, default="test", choices=['train', 'val', 'test', 'all'], help="Valid: 'train', 'val', 'test', 'all'")
 parser.add_argument("--INPUT_AS_ZIP", type=bool, default=False, help="Whether tracker input files are zipped")
