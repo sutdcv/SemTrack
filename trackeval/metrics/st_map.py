@@ -22,10 +22,7 @@ class STMAP(_BaseMetric):
             'TIME_RANGES': [[0, 3], [3, 10], [10, 1e5]],  # additional time range sets for which STMAP is evaluated
             # (all time range always included) , default values for TAO evaluation
             'TIME_RANGE_LABELS': ["time_s", "time_m", "time_l"],  # the labels for the time ranges
-            'IOU_THRESHOLDS': np.arange(0.1, 0.6, 0.1),  # np.arange(0.05, 0.99, 0.05),  # np.arange(0.3, 0.96, 0.05),  # the IoU thresholds
-            # 'IOU_THRESHOLDS': np.arange(0.05, 0.69, 0.05),  # the IoU thresholds
-            # 'IOU_THRESHOLDS': np.arange(0.05, 0.49, 0.05),  # the IoU thresholds
-            # 'IOU_THRESHOLDS': np.arange(0.05, 0.29, 0.05),  # the IoU thresholds
+            'IOU_THRESHOLDS': np.arange(0.1, 0.7, 0.1),  # np.arange(0.3, 0.96, 0.05),  # the IoU thresholds
             'RECALL_THRESHOLDS': np.linspace(0.0, 1.00, int(np.round((1.00 - 0.0) / 0.01) + 1), endpoint=True),
             'rel_pos_rate': 0.7,  # the relative positive rate for the relation positive/negative matching
             # recall thresholds at which precision is evaluated
@@ -98,15 +95,6 @@ class STMAP(_BaseMetric):
                                         boxformat=boxformat)
         rel_pos, rel_neg = self._compute_track_rel(data['gt_track_is_main'], data['gt_track_rel_sub_class'], data['gt_track_rel_obj_class'],
                            data['dt_track_is_main'], data['dt_track_rel_sub_list'], data['dt_track_rel_obj_list'])
-
-        num_thrs = len(self.array_labels)
-        num_recalls = len(self.rec_thrs)
-
-        # -1 for absent categories
-        precision = -np.ones(
-            (num_thrs, num_recalls, self.num_ig_masks)
-        )
-        recall = -np.ones((num_thrs, self.num_ig_masks))
 
         for mask_idx in range(self.num_ig_masks):
             gt_ig_mask = gt_ig_masks[mask_idx]
@@ -190,57 +178,6 @@ class STMAP(_BaseMetric):
                 "rel_pos_sel": rel_pos_sel,
                 "rel_neg_sel": rel_neg_sel
             }
-
-            # --------------------------------------------------
-            tps = np.logical_and(dt_m != -1, np.logical_not(dt_ig))
-            fps = np.logical_and(dt_m == -1, np.logical_not(dt_ig))
-
-            tp_sum = np.cumsum(tps, axis=1).astype(dtype=np.float)
-            fp_sum = np.cumsum(fps, axis=1).astype(dtype=np.float)
-
-            for iou_thr_idx, (tp, fp) in enumerate(zip(tp_sum, fp_sum)):
-                tp = np.array(tp)
-                fp = np.array(fp)
-                num_tp = len(tp)
-                rc = tp / num_gt
-                if num_tp:
-                    recall[iou_thr_idx, mask_idx] = rc[-1]
-                else:
-                    recall[iou_thr_idx, mask_idx] = 0
-
-                # np.spacing(1) ~= eps
-                pr = tp / (fp + tp + np.spacing(1))
-                pr = pr.tolist()
-
-                # Ensure precision values are monotonically decreasing
-                for i in range(num_tp - 1, 0, -1):
-                    if pr[i] > pr[i - 1]:
-                        pr[i - 1] = pr[i]
-
-                # find indices at the predefined recall values
-                rec_thrs_insert_idx = np.searchsorted(rc, self.rec_thrs, side="left")
-
-                pr_at_recall = [0.0] * num_recalls
-
-                try:
-                    for _idx, pr_idx in enumerate(rec_thrs_insert_idx):
-                        pr_at_recall[_idx] = pr[pr_idx]
-                except IndexError:
-                    pass
-
-                precision[iou_thr_idx, :, mask_idx] = (np.array(pr_at_recall))
-
-        # res = {'precision': precision, 'recall': recall}
-
-        for a_id, alpha in enumerate(self.array_labels):
-            for lbl_idx, lbl in enumerate(self.lbls):
-                p = precision[a_id, :, lbl_idx]
-                if len(p[p > -1]) == 0:
-                    mean_p = -1
-                else:
-                    mean_p = np.mean(p[p > -1])
-                res['TI_AP_' + lbl][a_id] = mean_p
-                res['TI_AR_' + lbl][a_id] = recall[a_id, lbl_idx]
 
         return res
 
