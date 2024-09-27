@@ -7,10 +7,10 @@ This is the official repository for the paper "SemTrack: A Large-scale Dataset f
 [Project Page](https://sutdcv.github.io/SemTrack/)
 
 ## Paper
-[arXiv]() [ECCV2024]()
+[ECCV2024](https://www.ecva.net/papers/eccv_2024/papers_ECCV/html/3555_ECCV_2024_paper.php)
 
 ## Dataset
-Please download our dataset and toolkit [here](https://forms.office.com/Pages/ResponsePage.aspx?id=drd2NJDpck-5UGJImDFiPQJNzw6AhuZDkzEViiWzJltUNjhKM01KWjhXN0FBNjcxNVBZQk03VVFHQi4u).
+Please download our dataset and toolkit [here](https://forms.gle/GsvB5EwZkJdUjA9Q8).
 
 ## Evaluation
 The evaluation code is available at [Evaluation](https://github.com/sutdcv/SemTrack/tree/eval).
